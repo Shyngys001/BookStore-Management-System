@@ -35,3 +35,5 @@ The main goal of this project is to develop a software for the effective managem
 ## ER-Diagram
 
 Let's move on to the ER-Diagram 🖼 section. The ERD consists of 9 entity sets, 27 attributes, and 8 relations 🖇. Below, you can view the ERD👇
+
+<img width="940" alt="ER-Diagram" src="https://user-images.githubusercontent.com/96326525/231097235-528b026c-7495-411d-b821-e236c0a6cca0.png">
