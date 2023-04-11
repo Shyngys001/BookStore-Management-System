@@ -7,10 +7,14 @@ The "Bookstore 📚" repository is a project developed for a database management
 <br>
 
 ## Table of Contents
-1. [Introduction](#Introduction)
-2. [ER-Diagram](#ER-Diagram)
-3. [Normalization](#Normalization)
-4. [PL/SQL](#PL/SQL)
+- [BookStore 📚](#bookstore-)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+      - [Features:](#features)
+  - [ER-Diagram](#er-diagram)
+  - [Normalization](#normalization)
+  - [PL/SQL](#plsql)
 
 <br>
 
@@ -37,3 +41,19 @@ The main goal of this project is to develop a software for the effective managem
 Let's move on to the ER-Diagram 🖼 section. The ERD consists of 9 entity sets, 27 attributes, and 8 relations 🖇. Below, you can view the ERD👇
 
 <img width="940" alt="ER-Diagram" src="https://user-images.githubusercontent.com/96326525/231097235-528b026c-7495-411d-b821-e236c0a6cca0.png">
+
+<br>
+
+## Normalization
+
+TODO: Explanation of why the structure follows normal forms
+
+
+## PL/SQL
+
+TODO: CODING PART
+- Procedure which does group by information 
+- Function which counts the number of records 
+- Procedure which uses SQL%ROWCOUNT to determine the number of rows affected
+- Add user-defined exception which disallows to enter title of item (e.g. book) to be less than 5 characters
+- Create a trigger before insert on any entity which will show the current number of rows in the table
