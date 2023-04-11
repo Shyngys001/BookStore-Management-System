@@ -7,16 +7,13 @@ The "Bookstore 📚" repository is a project developed for a database management
 <br>
 
 ## Table of Contents
-- [BookStore 📚](#bookstore-)
-  - [Overview](#overview)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-      - [Features:](#features)
-  - [ER-Diagram](#er-diagram)
-  - [Normalization](#normalization)
-  - [PL/SQL](#plsql)
+1. [Introduction](#intro)
+2. [ER-Diagram](#erd)
+3. [Normalization](#normalize)
+4. [PL/SQL](#coding)
 
 <br>
+<a id="intro"></a>
 
 ## Introduction
 
@@ -35,6 +32,7 @@ The main goal of this project is to develop a software for the effective managem
 5. The software also features a trigger that shows the current number of rows in the table before inserting new data.
 
 <br>
+<a id="erd"></a>
 
 ## ER-Diagram
 
@@ -44,10 +42,13 @@ Let's move on to the ER-Diagram 🖼 section. The ERD consists of 9 entity sets,
 
 <br>
 
+<a id="normalize"></a>
+
 ## Normalization
 
 TODO: Explanation of why the structure follows normal forms
 
+<a id="coding"></a>
 
 ## PL/SQL
 
