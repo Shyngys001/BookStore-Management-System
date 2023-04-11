@@ -18,7 +18,7 @@ The "Bookstore 📚" repository is a project developed for a database management
 
 The main goal of this project is to develop a software for the effective management of an online bookstore's database. The software is designed to be used by online shoppers. Customers can order books using the online store, and employees can easily update the website with new books and features.
 
-### Features:
+#### Features:
 
 1. The software includes a grouping procedure to organize information efficiently.
 
@@ -30,3 +30,8 @@ The main goal of this project is to develop a software for the effective managem
    
 5. The software also features a trigger that shows the current number of rows in the table before inserting new data.
 
+<br>
+
+## ER-Diagram
+
+Let's move on to the ER-Diagram 🖼 section. The ERD consists of 9 entity sets, 27 attributes, and 8 relations 🖇. Below, you can view the ERD👇
