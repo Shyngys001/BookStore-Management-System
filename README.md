@@ -1,7 +1,6 @@
 # BookStore 📚
 
 ## Overview
-<hr>
 
 The "Bookstore 📚" repository is a project developed for a database management system course ⚙️. The purpose of the project is to design and implement a database management system for an online book shop. 
 
@@ -16,6 +15,5 @@ The "Bookstore 📚" repository is a project developed for a database management
 <br>
 
 ## Introduction
-<hr>
 
 
