@@ -49,11 +49,11 @@ Let's move on to the ER-Diagram section. The ERD consists of 9 entity sets, 27 a
 
 TODO: Explanation of why the structure follows normal forms
 
-<b> To normalize tables into 3NF, we need to follow the following steps:</b>
+<b> To normalize tables into 3NF, we need to follow the following steps: </b>
 
-1.Identify the functional dependencies
-2.Remove the partial dependencies
-3.Remove the transitive dependencies
+1. Identify the functional dependencies<br>
+2. Remove the partial dependencies<br>
+3. Remove the transitive dependencies<br>
 
 
 <b>Table</b>: <code>Publisher</code>
