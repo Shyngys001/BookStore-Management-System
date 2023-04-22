@@ -55,6 +55,11 @@ TODO: Explanation of why the structure follows normal forms
 2. Remove the partial dependencies<br>
 3. Remove the transitive dependencies<br>
 
+<b>Table</b>: <code>Publisher</code>
+
+<b>Attributes</b>: publisher id [primary key], address, email, name, phone.
+
+This table is already in 3NF. It has a <code>primary key </code>, and there are no partial or transitive dependencies. Therefore, normalization is not required.
 
 
 <a id="coding"></a>
