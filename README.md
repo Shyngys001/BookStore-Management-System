@@ -48,6 +48,10 @@ Let's move on to the ER-Diagram section. The ERD consists of 9 entity sets, 27 a
 
 TODO: Explanation of why the structure follows normal forms
 
+<b>Table</b>: <code>Publisher</code>
+
+<b>Attributes</b>: publisher id [primary key], address, email, name, phone.
+
 <a id="coding"></a>
 
 ## PL/SQL ‍💻
