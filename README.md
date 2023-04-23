@@ -145,3 +145,14 @@ TODO: CODING PART
 - Procedure which uses SQL%ROWCOUNT to determine the number of rows affected
 - Add user-defined exception which disallows to enter title of item (e.g. book) to be less than 5 characters
 - Create a trigger before insert on any entity which will show the current number of rows in the table
+
+```sql
+CREATE OR REPLACE TRIGGER trigger_count_rows
+BEFORE INSERT ON books
+DECLARE
+   current_num_rows NUMBER;
+BEGIN
+   SELECT COUNT(*) INTO current_num_rows FROM books;
+   dbms_output.put_line('Current number of rows in the table: ' || current_num_rows);
+END;
+```
