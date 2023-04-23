@@ -91,9 +91,9 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 <b>Table</b>: <code>Genre</code>
 
 <b>Attributes</b>: g_name(primary key), age_group
-Since there are no repeating groups in the table, it is already in 1NF.
-Since the table only has one candidate key, which is the primary key, there are no partial dependencies to eliminate.
-There are no transitive dependencies and the table is already in 3NF.
+* Since there are no repeating groups in the table, it is already in 1NF.
+* Since the table only has one candidate key, which is the primary key, there are no partial dependencies to eliminate.
+* There are no transitive dependencies and the table is already in 3NF.
 
 
 <b>Table</b>: <code></code>
