@@ -61,16 +61,65 @@ TODO: Explanation of why the structure follows normal forms
 
 This table is already in 3NF. It has a <code>primary key </code>, and there are no partial or transitive dependencies. Therefore, normalization is not required.
 
+
+
+
 <b>Table</b>: <code>Books</code>
 
 <b>Attributes</b>: book_id, author_id, publisher_id, name, price.
 This satisfies the requirements of 3NF because there are no transitive dependencies and all non-key attributes are dependent on the primary key of each table.
 
-b>Table</b>: <code>Reviews</code>
+
+
+
+<b>Table</b>: <code>Reviews</code>
 
 <b>Attributes</b>: text, rating, customer_id [primary key].
 The table is already in 1NF since all attributes contain atomic values. Since there is only one non-prime attribute ("text" and "rating" are both dependent on the entire primary key), the table is already in 2NF. There are no transitive dependencies in the table, so it is already in 3NF.
 
+
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
+
+
+<b>Table</b>: <code></code>
+
+<b>Attributes</b>: 
+write________________
 
 
 
