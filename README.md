@@ -119,10 +119,12 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 
 
 
-<b>Table</b>: <code></code>
+<b>Table</b>: <code>Customer</code>
 
-<b>Attributes</b>: 
-write________________
+<b>Attributes</b>: c_name, age, address, customer_id [primary key].
+* Table contains a single value [unique]
+* It is a single-column primary key that is 1NF and independent of any subset of candidate key relations in terms of functionality.
+* It is a 2NF and it has no transitive functional dependencies
 
 
 <b>Table</b>: <code></code>
