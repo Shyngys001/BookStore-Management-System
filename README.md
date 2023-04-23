@@ -156,3 +156,14 @@ BEGIN
    dbms_output.put_line('Current number of rows in the table: ' || current_num_rows);
 END;
 ```
+
+```sql
+CREATE OR REPLACE FUNCTION count_records
+RETURN NUMBER
+IS
+   record_count NUMBER;
+BEGIN
+   SELECT COUNT(*) INTO record_count FROM table_name;
+   RETURN record_count;
+END;
+```
