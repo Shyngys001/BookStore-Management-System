@@ -104,10 +104,12 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * 3NF -- > Third Normal Form (3NF): Because the table contains no transitive dependencies, it is already in 3NF.
 
 
-<b>Table</b>: <code></code>
+<b>Table</b>: <code>Order</code>
 
-<b>Attributes</b>: 
-write________________
+<b>Attributes</b>: customer_id(primary key), order_date
+* there are no repeating groups in the table so it is already in 1NF.
+* the table only has one candidate key, it's primary key, there are no partial dependencies, so it's in 2NF.
+* there are no transitive dependencies because there is one atribute that depends on primary key so it's in 3NF.
 
 
 <b>Table</b>: <code></code>
