@@ -58,16 +58,14 @@ TODO: Explanation of why the structure follows normal forms
 <b>Table</b>: <code>Publisher</code>
 
 <b>Attributes</b>: publisher id [primary key], address, email, name, phone.
-
-This table is already in 3NF. It has a <code>primary key </code>, and there are no partial or transitive dependencies. Therefore, normalization is not required.
-
-
-
+* there are no repeating groups, 1Nf
+* publisher_id is the only candidate key, there are no partial dependencies, 2NF
+* no transitive dependencies, 3NF
 
 <b>Table</b>: <code>Books</code>
 
 <b>Attributes</b>: book_id, author_id, publisher_id, name, price.
-This satisfies the requirements of 3NF because there are no transitive dependencies and all non-key attributes are dependent on the primary key of each table.
+This satisfies the requirements of 3NF because there are no transitive dependencies and non-key atributes depend on primary key.
 
 
 
