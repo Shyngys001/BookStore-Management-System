@@ -61,6 +61,11 @@ TODO: Explanation of why the structure follows normal forms
 
 This table is already in 3NF. It has a <code>primary key </code>, and there are no partial or transitive dependencies. Therefore, normalization is not required.
 
+<b>Table</b>: <code>Books</code>
+
+<b>Attributes</b>: book_id, author_id, publisher_id, name, price.
+This satisfies the requirements of 3NF because there are no transitive dependencies and all non-key attributes are dependent on the primary key of each table.
+
 
 <a id="coding"></a>
 
