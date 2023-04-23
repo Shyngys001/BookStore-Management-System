@@ -74,7 +74,7 @@ This satisfies the requirements of 3NF because there are no transitive dependenc
 
 <b>Table</b>: <code>Reviews</code>
 
-<b>Attributes</b>: text, rating, customer_id [primary key].
+<b>Attributes</b>: text, rating, customer_id [foreign key].
 The table is already in 1NF since all attributes contain atomic values. Since there is only one non-prime attribute ("text" and "rating" are both dependent on the entire primary key), the table is already in 2NF. There are no transitive dependencies in the table, so it is already in 3NF.
 
 
