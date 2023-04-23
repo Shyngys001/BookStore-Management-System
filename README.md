@@ -168,7 +168,7 @@ BEGIN
 END;
 ```
 
-```execution
+```sql
 DECLARE
   -- declare a variable to hold the returned count value
   v_count NUMBER;
