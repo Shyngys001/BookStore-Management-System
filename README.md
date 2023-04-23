@@ -141,6 +141,20 @@ write________________
 
 TODO: CODING PART
 - Procedure which does group by information 
+
+```sql
+CREATE OR REPLACE PROCEDURE group_by_info
+IS
+  v_address authors.address%TYPE;
+  v_count NUMBER;
+BEGIN
+  SELECT address, COUNT(*) INTO v_address, v_count
+  FROM authors
+  GROUP BY address;
+END;
+```
+
+
 - Function which counts the number of records 
 - Procedure which uses SQL%ROWCOUNT to determine the number of rows affected
 - Add user-defined exception which disallows to enter title of item (e.g. book) to be less than 5 characters
@@ -157,13 +171,3 @@ BEGIN
 END;
 ```
 
-```sql
-CREATE OR REPLACE FUNCTION count_records
-RETURN NUMBER
-IS
-   record_count NUMBER;
-BEGIN
-   SELECT COUNT(*) INTO record_count FROM table_name;
-   RETURN record_count;
-END;
-```
