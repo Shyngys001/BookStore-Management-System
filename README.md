@@ -112,10 +112,13 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * there are no transitive dependencies because there is one atribute that depends on primary key so it's in 3NF.
 
 
-<b>Table</b>: <code></code>
+<b>Table</b>: <code>Author</code>
 
-<b>Attributes</b>: 
-write________________
+<b>Attributes</b>: author_id(primary key), gender, num_books, address, name
+* there are no repeating groups, so it's in 1nf
+* author_id is the only candidate key, there are no partial dependencies in this table.
+* there is no transitive dependency in this table so it is in 3NF.
+
 
 
 <b>Table</b>: <code></code>
