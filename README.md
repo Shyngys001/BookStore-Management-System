@@ -155,7 +155,32 @@ END;
 ```
 
 
-- Function which counts the number of records 
+- Function which counts the number of records
+
+```sql
+CREATE OR REPLACE FUNCTION count_records
+RETURN NUMBER
+IS
+   record_count NUMBER;
+BEGIN
+   SELECT COUNT(*) INTO record_count FROM authors;
+   RETURN record_count;
+END;
+```
+
+```execution
+DECLARE
+  -- declare a variable to hold the returned count value
+  v_count NUMBER;
+BEGIN
+  -- call the function and store the returned value in the variable
+  v_count := count_records();
+  -- do something with the count value, such as print it to the console
+  DBMS_OUTPUT.PUT_LINE('The number of records is: ' || v_count);
+END;
+```
+
+
 - Procedure which uses SQL%ROWCOUNT to determine the number of rows affected
 - Add user-defined exception which disallows to enter title of item (e.g. book) to be less than 5 characters
 - Create a trigger before insert on any entity which will show the current number of rows in the table
