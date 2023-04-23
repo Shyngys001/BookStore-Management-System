@@ -80,10 +80,12 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 
 
 
-<b>Table</b>: <code></code>
+<b>Table</b>: <code>Cart</code>
 
-<b>Attributes</b>: 
-write________________
+<b>Attributes</b>: total_price, cart_id [primary key], customer_id[foreign key].
+* The table is already in first normal form (1NF) because all attributes have atomic values.
+* Second Normal Form (2NF): The table is already in 2NF since "total_price" is functionally reliant on the full primary key (i.e., "cart_id, customer_id").
+* Third Normal Form (3NF): Because the table has no transitive relationships, it is already in 3NF.
 
 
 <b>Table</b>: <code></code>
