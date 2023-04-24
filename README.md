@@ -34,8 +34,20 @@ The main goal of this project is to develop a software for the effective managem
 <br>
 <a id="erd"></a>
 
-## <a href="https://docs.google.com/presentation/d/10Zp-Qr_TWKR9FG4UQcXwb0Lfp0XqOSTvhHAa7u5Cyjg/edit#slide=id.p">Link to presentation</a>
+### <a href="https://docs.google.com/presentation/d/10Zp-Qr_TWKR9FG4UQcXwb0Lfp0XqOSTvhHAa7u5Cyjg/edit#slide=id.p">Link to presentation</a>
+
+### <a href="">YouTube Link</a>
+
+### <a href="">GitHub Link</a>
+
 <br>
+
+## IDs of Teammembers:
+* 210103370
+* 210107180
+* 210103362
+* 210103418
+
 
 
 ## ER-Diagram 🖼
