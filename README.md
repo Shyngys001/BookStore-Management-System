@@ -101,16 +101,16 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 <b>Table</b>: <code>Order</code>
 
 <b>Attributes</b>: order_id (primary key), customer_id(foreign key), order_date
-* there are no repeating groups in the table so it is already in 1NF.
-* the table only has one candidate key, it's primary key, there are no partial dependencies, so it's in 2NF.
+* In the Order table all the values are atomic.
+* Order table has one candidate key(order_id), it's in 2NF, there are no partial dep.
 * there are no transitive dependencies because there is one atribute that depends on primary key so it's in 3NF.
 
 
 <b>Table</b>: <code>Authors</code>
 
 <b>Attributes</b>: author_id(primary key), gender, num_books, address, name
-* there are no repeating groups, so it's in 1nf
-* author_id is the only candidate key, there are no partial dependencies in this table.
+* The table Author doesn't have repeating groups
+* author_id(primary key and only one candidate key).  No partial dep.
 * there is no transitive dependency in this table so it is in 3NF.
 
 
