@@ -40,7 +40,7 @@ Let's move on to the ER-Diagram section. The ERD consists of 9 entity sets, 27 a
 
 <img width="874" alt="Er-diagram" src="https://user-images.githubusercontent.com/96326525/233801973-7373b260-301e-4c01-8c69-a212cad46bd9.png">
 
-
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vQFo7GzWLQyZe_CIFPHLlwWi5etAouh5_GFgb7_1MLHuAVFtGFxuPcTjaj62KC6FXF_nH0d53IWLBQg/pub?start=false&loop=false&delayms=3000&slide=id.g2390c71edfb_0_72" target="_blank"> Our Presentation</a>
 <br>
 
 <a id="normalize"></a>
