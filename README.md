@@ -65,10 +65,9 @@ TODO: Explanation of why the structure follows normal forms
 <b>Table</b>: <code>Books</code>
 
 <b>Attributes</b>: book_id, author_id, publisher_id, name, price.
-This satisfies the requirements of 3NF because there are no transitive dependencies and non-key atributes depend on primary key.
-
-
-
+1. This table is in 1'st normal form, because it has no repeating groups. ex: 1 ---> blabla@mail.com, hehe@mail.com.   They Are atomic 
+2. This table is in 2'nd normal form, because book_id is only a candidate key, there are no partial dependencies.
+3. This table is in 3'rd normal form, because there are no transitivity dependencies.
 
 <b>Table</b>: <code>Reviews</code>
 
