@@ -137,7 +137,6 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 
 ## PL/SQL ‍💻
 
-TODO: CODING PART
 - Procedure which does group by information 
 
 ```sql
