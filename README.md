@@ -126,9 +126,10 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * It is a 2NF and it has no transitive functional dependencies
 
 
-<b>Table</b>: <code>Employees</code>
-
-<b>Attributes</b>: employee_id (primary key), employee_name, title, salary
+<b>Attributes</b>: name [primary key], title, salary
+* Table only has one unique value.
+* A single-column primary key that is 1NF and functionally unrelated to any subset of potential key relations. 
+* There are no transitive functional dependencies and it is a 2NF.
 
 
 
