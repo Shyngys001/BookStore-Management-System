@@ -58,16 +58,16 @@ TODO: Explanation of why the structure follows normal forms
 <b>Table</b>: <code>Publishers</code>
 
 <b>Attributes</b>: publisher_id [primary key], address, email, publisher_name, phone.
-* there are no repeating groups, 1Nf
-* publisher_id is the only candidate key, there are no partial dependencies, 2NF
-* no transitive dependencies, 3NF
+* You can see that the table publisher doesn't have repeating groups.
+* In table Publisher we have inly one primarry key(publisher_id),  2NF
+* In this table we don't have a transitivity, 3NF
 
 <b>Table</b>: <code>Books</code>
 
 <b>Attributes</b>: book_id, author_id, publisher_id, name, price.
-1. This table is in 1'st normal form, because it has no repeating groups. ex: 1 ---> blabla@mail.com, hehe@mail.com.   They Are atomic 
-2. This table is in 2'nd normal form, because book_id is only a candidate key, there are no partial dependencies.
-3. This table is in 3'rd normal form, because there are no transitivity dependencies.
+1. Table Books is in 1'st normal form, because it has no repeating groups. ex: 1 ---> blabla@mail.com, hehe@mail.com.   They Are atomic 
+2. Table Books is in 2'nd normal form, because book_id is a primary key(candidate). Table Doesn't have partial dep.
+3. Table Books is in 3'rd normal form, because this table doesn't have transitivity.
 
 <b>Table</b>: <code>Reviews</code>
 
