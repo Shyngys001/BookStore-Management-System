@@ -182,6 +182,17 @@ END;
 
 
 - Procedure which uses SQL%ROWCOUNT to determine the number of rows affected
+```sql
+CREATE OR REPLACE PROCEDURE rows_affected
+IS
+   rows_processed NUMBER;
+BEGIN
+   UPDATE employees SET employee_name = 'Anuar Ospanov' WHERE employee_id = '1';
+   rows_processed := SQL%ROWCOUNT;
+   DBMS_OUTPUT.PUT_LINE('Number of rows affected: ' || rows_processed);
+END;
+```
+
 - Add user-defined exception which disallows to enter title of item (e.g. book) to be less than 5 characters
 - Create a trigger before insert on any entity which will show the current number of rows in the table
 ```sql
