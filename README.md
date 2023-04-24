@@ -127,10 +127,9 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * It is a 2NF and it has no transitive functional dependencies
 
 
-<b>Table</b>: <code></code>
+<b>Table</b>: <code>Employees</code>
 
-<b>Attributes</b>: 
-write________________
+<b>Attributes</b>: employee_id (primary key), employee_name, title, salary
 
 
 
