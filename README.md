@@ -169,12 +169,9 @@ END;
 
 ```sql
 DECLARE
-  -- declare a variable to hold the returned count value
   v_count NUMBER;
 BEGIN
-  -- call the function and store the returned value in the variable
   v_count := count_records();
-  -- do something with the count value, such as print it to the console
   DBMS_OUTPUT.PUT_LINE('The number of records is: ' || v_count);
 END;
 ```
