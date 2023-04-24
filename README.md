@@ -55,9 +55,9 @@ TODO: Explanation of why the structure follows normal forms
 2. Remove the partial dependencies<br>
 3. Remove the transitive dependencies<br>
 
-<b>Table</b>: <code>Publisher</code>
+<b>Table</b>: <code>Publishers</code>
 
-<b>Attributes</b>: publisher id [primary key], address, email, name, phone.
+<b>Attributes</b>: publisher_id [primary key], address, email, publisher_name, phone.
 * there are no repeating groups, 1Nf
 * publisher_id is the only candidate key, there are no partial dependencies, 2NF
 * no transitive dependencies, 3NF
@@ -88,7 +88,7 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 
 <b>Table</b>: <code>Genre</code>
 
-<b>Attributes</b>: g_name(primary key), age_group
+<b>Attributes</b>: genre_id (primary key), genre, age_group
 * Since there are no repeating groups in the table, it is already in 1NF.
 * Since the table only has one candidate key, which is the primary key, there are no partial dependencies to eliminate.
 * There are no transitive dependencies and the table is already in 3NF.
@@ -102,15 +102,15 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * 3NF -- > Third Normal Form (3NF): Because the table contains no transitive dependencies, it is already in 3NF.
 
 
-<b>Table</b>: <code>Order</code>
+<b>Table</b>: <code>Orders</code>
 
-<b>Attributes</b>: customer_id(primary key), order_date
+<b>Attributes</b>: order_id (primary key), customer_id(foreign key), order_date
 * there are no repeating groups in the table so it is already in 1NF.
 * the table only has one candidate key, it's primary key, there are no partial dependencies, so it's in 2NF.
 * there are no transitive dependencies because there is one atribute that depends on primary key so it's in 3NF.
 
 
-<b>Table</b>: <code>Author</code>
+<b>Table</b>: <code>Authors</code>
 
 <b>Attributes</b>: author_id(primary key), gender, num_books, address, name
 * there are no repeating groups, so it's in 1nf
@@ -119,7 +119,7 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 
 
 
-<b>Table</b>: <code>Customer</code>
+<b>Table</b>: <code>Customers</code>
 
 <b>Attributes</b>: c_name, age, address, customer_id [primary key].
 * Table contains a single value [unique]
