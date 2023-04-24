@@ -74,9 +74,6 @@ TODO: Explanation of why the structure follows normal forms
 <b>Attributes</b>: review_id (primary key), text, rating, customer_id (foreign key).
 The table is already in 1NF since all attributes contain atomic values. Since there is only one non-prime attribute ("text" and "rating" are both dependent on the entire primary key), the table is already in 2NF. There are no transitive dependencies in the table, so it is already in 3NF.
 
-
-
-
 <b>Table</b>: <code>Cart</code>
 
 <b>Attributes</b>: total_price, cart_id [primary key], customer_id [foreign key].
@@ -101,7 +98,7 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * 3NF -- > Third Normal Form (3NF): Because the table contains no transitive dependencies, it is already in 3NF.
 
 
-<b>Table</b>: <code>Orders</code>
+<b>Table</b>: <code>Order</code>
 
 <b>Attributes</b>: order_id (primary key), customer_id(foreign key), order_date
 * there are no repeating groups in the table so it is already in 1NF.
@@ -125,6 +122,7 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 * It is a single-column primary key that is 1NF and independent of any subset of candidate key relations in terms of functionality.
 * It is a 2NF and it has no transitive functional dependencies
 
+<b>Table</b>: <code>Employee</code>
 
 <b>Attributes</b>: name [primary key], title, salary
 * Table only has one unique value.
