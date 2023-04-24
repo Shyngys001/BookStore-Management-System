@@ -141,13 +141,16 @@ The table is already in 1NF since all attributes contain atomic values. Since th
 ```sql
 CREATE OR REPLACE PROCEDURE group_by_info
 IS
-  v_address authors.address%TYPE;
-  v_count NUMBER;
-BEGIN
-  SELECT address, COUNT(*) INTO v_address, v_count
-  FROM authors
-  GROUP BY address;
-END;
+BEGIN  
+  FOR i IN (
+    SELECT address, COUNT(*) AS num_add
+    FROM authors
+    GROUP BY address
+    ORDER BY address
+  ) LOOP
+      DBMS_OUTPUT.PUT_LINE(i.address  ': '  i.num_add);
+    END LOOP;
+  END;
 ```
 
 
