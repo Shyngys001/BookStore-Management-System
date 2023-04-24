@@ -8,7 +8,7 @@ The "Bookstore 📚" repository is a project developed for a database management
 
 ## Table of Links 📄
 #### 1. <a href="https://docs.google.com/presentation/d/10Zp-Qr_TWKR9FG4UQcXwb0Lfp0XqOSTvhHAa7u5Cyjg/edit#slide=id.p">Presentation Link</a>
-#### 2. <a href="">YouTube Link</a>
+#### 2. <a href="https://youtu.be/T44gVQuIYC8">YouTube Link</a>
 #### 3. <a href="https://github.com/Shyngys001/BookStore-Management-System">GitHub Link</a>
 
 <br>
