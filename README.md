@@ -30,3 +30,41 @@ The main goal of this project is to develop a software for the effective managem
 * 210107180
 * 210103362
 * 210103418
+
+# <p align="center">Final 📑</p>
+
+### What's new?
+We have made some updates to our project. Firstly, we have transitioned all our data to a NoSQL format, specifically MongoDB. Additionally, we have implemented several queries tailored for MongoDB🍃 to efficiently retrieve and manipulate data within the repository. These queries ⚙️ have been specifically designed to optimize performance and enhance overall functionality. Below, you will find a list of queries.👇
+
+## Queries:
+1. Show all customers who have written reviews.
+```js
+db.customers.aggregate([
+  {
+    $lookup: {
+      from: 'reviews',
+      localField: '_id',
+      foreignField: 'customer_id',
+      as: 'reviews'
+    }
+  },
+  {
+    $match: {
+      reviews: { $exists: true, $ne: [] }
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      name: 1
+    }
+  }
+])
+
+```
+
+
+
+Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
+If you have any questions or need assistance, please don't hesitate to reach out.<br>
+Happy coding! 🤗
