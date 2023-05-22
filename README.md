@@ -37,7 +37,7 @@ The main goal of this project is to develop a software for the effective managem
 We have made some updates to our project. Firstly, we have transitioned all our data to a NoSQL format, specifically MongoDB. Additionally, we have implemented several queries tailored for MongoDB🍃 to efficiently retrieve and manipulate data within the repository. These queries ⚙️ have been specifically designed to optimize performance and enhance overall functionality. Below, you will find a list of queries.👇
 
 ## Queries:
-### 1. Show all customers who have written reviews.
+### 1. Show all customers who have written reviews 📇
 ```js
 db.customers.aggregate([
   {
@@ -63,7 +63,7 @@ db.customers.aggregate([
 
 ```
 
-### 2. Print the minimum and maximum prices of books.
+### 2. Print the minimum and maximum prices of books 📚
 ```js
 db.books.aggregate([
   {
@@ -82,13 +82,34 @@ db.books.aggregate([
   }
 ])
 ```
-### 3. Print name and salary of Frontend employees.
+
+### 3. Print name and salary of Frontend employees 💻
 ```js
 db.employees.find(
   {title: "Frontend Developer"}, 
   {_id: 0}
 )
 ```
+
+### 4. List all books written by authors whose names start with "A" 💡
+```js
+db.books.aggregate([
+  {
+    $lookup: {
+      from: "authors",
+      localField: "author_id",
+      foreignField: "_id",
+      as: "author"
+    }
+  },
+  {
+    $match: {
+      "author.name": /^A/
+    }
+  }
+])
+```
+
 
 
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
