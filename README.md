@@ -82,7 +82,13 @@ db.books.aggregate([
   }
 ])
 ```
-
+### 3. Print name and salary of Frontend employees.
+```js
+db.employees.find(
+  {title: "Frontend Developer"}, 
+  {_id: 0}
+)
+```
 
 
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
