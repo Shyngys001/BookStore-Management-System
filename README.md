@@ -37,7 +37,7 @@ The main goal of this project is to develop a software for the effective managem
 We have made some updates to our project. Firstly, we have transitioned all our data to a NoSQL format, specifically MongoDB. Additionally, we have implemented several queries tailored for MongoDB🍃 to efficiently retrieve and manipulate data within the repository. These queries ⚙️ have been specifically designed to optimize performance and enhance overall functionality. Below, you will find a list of queries.👇
 
 ## Queries:
-1. Show all customers who have written reviews.
+### 1. Show all customers who have written reviews.
 ```js
 db.customers.aggregate([
   {
@@ -61,6 +61,26 @@ db.customers.aggregate([
   }
 ])
 
+```
+
+### 2. Print the minimum and maximum prices of books.
+```js
+db.books.aggregate([
+  {
+    $group: {
+      _id: null,
+      minPrice: { $min: '$price' },
+      maxPrice: { $max: '$price' }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      minPrice: 1,
+      maxPrice: 1
+    }
+  }
+])
 ```
 
 
