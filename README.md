@@ -91,9 +91,13 @@ db.employees.find(
 )
 ```
 
-### 4. Find the average salary of employees who work in the bookStore. If it's decimal, convert it to int and show the result 💡
+### 4. Find the average salary of employees of a specific position who work in the bookStore. If it's decimal, convert it to int and show the result 💡
 ```js
+const employeePosition = "Backend Developer"
 db.employees.aggregate([
+  {
+    $match: {title: employeePosition}
+  },
   {
     $group: {
       _id: null,
@@ -107,8 +111,6 @@ db.employees.aggregate([
   }
 ])
 ```
-
-
 
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
