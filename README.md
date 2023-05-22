@@ -91,21 +91,19 @@ db.employees.find(
 )
 ```
 
-### 4. List all books written by authors whose names start with "A" 💡
+### 4. Find the average salary of employees who work in the bookStore. If it's decimal, convert it to int and show the result 💡
 ```js
-db.books.aggregate([
+db.employees.aggregate([
   {
-    $lookup: {
-      from: "authors",
-      localField: "author_id",
-      foreignField: "_id",
-      as: "author"
+    $group: {
+      _id: null,
+      averageSalary: { $avg: "$salary" }
     }
   },
-  {
-    $match: {
-      "author.name": /^A/
-    }
+  { 
+    $addFields: { 
+      convertedSalarytoInt: { $concat: [ { $toString: { $toInt: "$averageSalary" }}, " $"] }
+    } 
   }
 ])
 ```
