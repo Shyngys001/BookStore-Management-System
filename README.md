@@ -197,7 +197,7 @@ genre: "Drama"
 
 ### 13. Retrieve books within a particular price range
 ```js
-db.books.find({ price: { $gte: 10, $lte: 50 } })
+db.books.find({ price: { $gte: 10, $lte: 15 } }).sort({price: 1})
 ```
 
 
