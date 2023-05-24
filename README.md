@@ -130,6 +130,25 @@ db.books.find({publisher_id: "2172280151"}, {bookName: true, price: true, publis
 true, _id: false});
 ```
 
+### Find all books ordered by a specific customer 📜 
+```js
+db.orders.aggregate([
+{
+$match: {
+customer_id: ObjectId("6469eb14da0b8e34ca487d81")
+}
+},
+{
+$lookup: {
+from: "customers",
+localField: "customer_id",
+foreignField: "_id",
+as: "books"
+}
+}
+])
+```
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
