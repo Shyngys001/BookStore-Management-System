@@ -160,8 +160,8 @@ db.employees.find().sort({ salary: 1 }).limit(1)
 db.cart.aggregate([
 {
   $group: {
-  _id: null,
-  totalRevenue: { $sum: "$totalPrice" }
+    _id: null,
+    totalRevenue: { $sum: "$totalPrice" }
   } 
 }
 ])
