@@ -113,7 +113,7 @@ db.employees.aggregate([
 ])
 ```
 
-### 5. Retrieve the total number of books in your bookStore 📑
+### 5. Retrieve the total number of books in your bookStore 📒
 ```js
 db.books.countDocuments()
 ```
@@ -123,7 +123,7 @@ db.books.countDocuments()
 db.authors.find({numBooks: {$gt : 5}}, {name : true, numBooks: true, _id: false})
 ```
 
-### 7. List: name and price of all books published by a specific publisher 📄
+### 7. List: name and price of all books published by a specific publisher 📃
 (id : 2172280151)
 ```js
 db.books.find({publisher_id: "2172280151"}, {bookName: true, price: true, publisher_id:
