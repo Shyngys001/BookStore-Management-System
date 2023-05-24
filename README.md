@@ -112,6 +112,11 @@ db.employees.aggregate([
 ])
 ```
 
+### 5. Retrieve the total number of books in your bookStore.
+```js
+db.books.countDocuments()
+```
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
