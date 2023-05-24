@@ -123,6 +123,13 @@ db.books.countDocuments()
 db.authors.find({numBooks: {$gt : 5}}, {name : true, numBooks: true, _id: false})
 ```
 
+### 7. List: name and price of all books published by a specific publisher 📄
+(id : 2172280151)
+```js
+db.books.find({publisher_id: "2172280151"}, {bookName: true, price: true, publisher_id:
+true, _id: false});
+```
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
