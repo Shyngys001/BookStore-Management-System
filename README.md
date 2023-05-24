@@ -194,10 +194,18 @@ genre: "Drama"
 ])
 ```
 
-### 13. Display the details of the employee with the lowest salary.
+### 13.1. Display the details of the employee with the lowest salary.
 ```js
 db.employees.find().sort({ salary: 1 }).limit(1)
 ```
+
+
+### 13.2. Retrieve books within a particular price range
+```js
+db.books.find({ price: { $gte: 10, $lte: 50 } })
+```
+
+
 
 ### 14. Retrieve the total revenue generated from all orders in your cart.
 ```js
