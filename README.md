@@ -207,25 +207,17 @@ db.books.find({ price: { $gte: 10, $lte: 50 } })
 
 
 
-### 14. Retrieve the total revenue generated from all orders in your cart.
-```js
-db.cart.aggregate([
-{
-  $group: {
-    _id: null,
-    totalRevenue: { $sum: "$totalPrice" }
-  } 
-}
+### 14. Find most popular countries where our customers come from.
+```
+db.customers.aggregate([
+  { $group: { _id: "$country", totalCustomers: { $sum: 1 } } },
+  { $sort: { totalCustomers: -1 } }
 ])
 ```
 
-### 15.1 Find the book with the highest price.
-```js
-db.books.find().sort({ price: -1 }).limit(1)
-```
 
 
-### 15.2 Calculate the average price of books in a specific genre or category.
+### 15. Calculate the average price of books in a specific genre or category.
 ```js
 db.books.aggregate([
   { 
@@ -244,7 +236,7 @@ db.books.aggregate([
 
 
 
-### 16. Find all customers who have placed orders.
+### 16.1. Find all customers who have placed orders.
 ```js
 db.customers.aggregate([ 
 {
@@ -262,6 +254,8 @@ db.customers.aggregate([
 } 
 ])
 ```
+
+
 
 
 
