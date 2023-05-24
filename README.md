@@ -157,11 +157,13 @@ db.employees.find().sort({ salary: 1 }).limit(1)
 
 ### 14. Retrieve the total revenue generated from all orders in your cart.
 ```js
-db.cart.aggregate([ {
-$group: {
-_id: null,
-totalRevenue: { $sum: "$totalPrice" }
-} }
+db.cart.aggregate([
+{
+  $group: {
+  _id: null,
+  totalRevenue: { $sum: "$totalPrice" }
+  } 
+}
 ])
 ```
 
@@ -172,7 +174,19 @@ db.books.find().sort({ price: -1 }).limit(1)
 
 ### 16. Find all customers who have placed orders.
 ```js
-db.employees.find().sort({ salary: 1 }).limit(1)
+db.customers.aggregate([ 
+{
+  $lookup: {
+    from: "orders",
+    localField: "_id", foreignField: "customer_id", as: "orders"
+  } 
+},
+{
+  $match: {
+    "orders": { $ne: [] } 
+  }
+} 
+])
 ```
 
 
