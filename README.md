@@ -30,6 +30,7 @@ The main goal of this project is to develop a software for the effective managem
 * 210107180
 * 210103362
 * 210103418
+* 210103205
 
 # <p align="center">Final 📑</p>
 
