@@ -118,6 +118,11 @@ db.employees.aggregate([
 db.books.countDocuments()
 ```
 
+### 6. List all authors who have published more than five books 📋
+```js
+db.authors.find({numBooks: {$gt : 5}}, {name : true, numBooks: true, _id: false})
+```
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
