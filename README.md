@@ -211,10 +211,30 @@ db.cart.aggregate([
 ])
 ```
 
-### 15. Find the book with the highest price.
+### 15.1 Find the book with the highest price.
 ```js
 db.books.find().sort({ price: -1 }).limit(1)
 ```
+
+
+### 15.2 Calculate the average price of books in a specific genre or category.
+```js
+db.books.aggregate([
+  { 
+    $match: { 
+      genre: "Comedy" 
+    } 
+  },
+  { 
+    $group: { 
+      _id: null, 
+      averagePrice: { $avg: "$price" } 
+    } 
+  }
+])
+```
+
+
 
 ### 16. Find all customers who have placed orders.
 ```js
