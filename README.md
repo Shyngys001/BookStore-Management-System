@@ -130,7 +130,7 @@ db.books.find({publisher_id: "2172280151"}, {bookName: true, price: true, publis
 true, _id: false});
 ```
 
-### Find all books ordered by a specific customer 📜 
+### 8. Find all books ordered by a specific customer 📜 
 ```js
 db.orders.aggregate([
 {
