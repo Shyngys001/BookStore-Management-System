@@ -149,6 +149,34 @@ as: "books"
 ])
 ```
 
+
+### 13. Display the details of the employee with the lowest salary.
+```js
+db.employees.find().sort({ salary: 1 }).limit(1)
+```
+
+### 14. Retrieve the total revenue generated from all orders in your cart.
+```js
+db.cart.aggregate([ {
+$group: {
+_id: null,
+totalRevenue: { $sum: "$totalPrice" }
+} }
+])
+```
+
+### 15. Find the book with the highest price.
+```js
+db.books.find().sort({ price: -1 }).limit(1)
+```
+
+### 16. Find all customers who have placed orders.
+```js
+db.employees.find().sort({ salary: 1 }).limit(1)
+```
+
+
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
