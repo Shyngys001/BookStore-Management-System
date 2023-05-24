@@ -150,6 +150,50 @@ db.orders.aggregate([
 ```
 
 
+### 9. List the books with the most reviews. 📜 
+```js
+db.books.aggregate([
+{
+$lookup: {
+from: "reviews",
+localField: "_id",
+foreignField: "book_id",
+as: "reviews"
+}
+},
+{
+$project: {
+_id: 1,
+bookName: 1,
+reviewCount: { $size: "$reviews" }
+}
+},
+{$match: {
+reviewCount: {$ne : 0}
+}
+}
+])
+```
+
+### 10. List books with drama genres.📜 
+```js
+db.genre.aggregate([
+{
+$lookup: {
+from: 'books',
+localField: 'book_id',
+foreignField: '_id',
+as: 'genres'
+}
+},
+{
+$match: {
+genre: "Drama"
+}
+}
+])
+```
+
 ### 13. Display the details of the employee with the lowest salary.
 ```js
 db.employees.find().sort({ salary: 1 }).limit(1)
