@@ -134,17 +134,17 @@ true, _id: false});
 ```js
 db.orders.aggregate([
 {
-$match: {
-customer_id: ObjectId("6469eb14da0b8e34ca487d81")
-}
+  $match: {
+    customer_id: ObjectId("6469eb14da0b8e34ca487d81")
+  }
 },
 {
-$lookup: {
-from: "customers",
-localField: "customer_id",
-foreignField: "_id",
-as: "books"
-}
+  $lookup: {
+    from: "customers",
+    localField: "customer_id",
+    foreignField: "_id",
+    as: "books"
+  }
 }
 ])
 ```
