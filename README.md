@@ -194,13 +194,8 @@ genre: "Drama"
 ])
 ```
 
-### 13.1. Display the details of the employee with the lowest salary.
-```js
-db.employees.find().sort({ salary: 1 }).limit(1)
-```
 
-
-### 13.2. Retrieve books within a particular price range
+### 13. Retrieve books within a particular price range
 ```js
 db.books.find({ price: { $gte: 10, $lte: 50 } })
 ```
@@ -210,8 +205,17 @@ db.books.find({ price: { $gte: 10, $lte: 50 } })
 ### 14. Find most popular countries where our customers come from.
 ```
 db.customers.aggregate([
-  { $group: { _id: "$country", totalCustomers: { $sum: 1 } } },
-  { $sort: { totalCustomers: -1 } }
+  { $group: {
+      _id: "$country",
+      totalCustomers: { 
+        $sum: 1 
+      } 
+    } 
+  },
+  { $sort: { 
+      totalCustomers: -1 
+    } 
+  }
 ])
 ```
 
@@ -236,7 +240,7 @@ db.books.aggregate([
 
 
 
-### 16.1. Find all customers who have placed orders.
+### 16. Find all customers who have placed orders.
 ```js
 db.customers.aggregate([ 
 {
