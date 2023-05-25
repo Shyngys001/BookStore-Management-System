@@ -113,7 +113,7 @@ db.employees.aggregate([
 ])
 ```
 
-### 5. Retrieve the total number of books in your bookStore 📒
+### 5. Retrieve the total number of books in our bookStore 📒
 ```js
 db.books.countDocuments()
 ```
