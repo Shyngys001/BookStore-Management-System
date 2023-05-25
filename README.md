@@ -252,7 +252,27 @@ db.books.aggregate([
   }
 ])
 ```
-
+``` js
+db.books.aggregate([
+  {
+    $lookup: {
+      from: "genre",
+      localField: "_id",
+      foreignField: "book_id",
+      as: "genre"
+    }
+  },
+  {
+    $unwind: "$genre"
+  },
+  {
+    $group: {
+      _id: "$genre.Comedy",
+      averagePrice: { $avg: "$price" }
+    }
+  }
+])
+```
 
 
 ### 16. Find all customers who have placed orders.
