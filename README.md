@@ -366,7 +366,7 @@ db.customers.aggregate([
     $sort: { totalOrderAmount: -1 }
   },
   {
-    $limit: 1 // Retrieve only the customer with the highest total order amount
+    $limit: 1 
   },
   {
     $addFields: {
