@@ -344,6 +344,40 @@ db.customers.aggregate([
 ```
 
 
+### 19.  Find a client who has maximum price of order.💻
+```js
+db.customers.aggregate([
+  {
+    $lookup: {
+      from: "cart",
+      localField: "_id",
+      foreignField: "customer_id",
+      as: "orders"
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      name: 1,
+      totalOrderAmount: { $sum: "$orders.totalPrice" }
+    }
+  },
+  {
+    $sort: { totalOrderAmount: -1 }
+  },
+  {
+    $limit: 1 // Retrieve only the customer with the highest total order amount
+  },
+  {
+    $addFields: {
+      totalOrderAmount: { $concat: [{ $toString: "$totalOrderAmount" }, " $"] }
+    }
+  }
+])
+
+```
+
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
