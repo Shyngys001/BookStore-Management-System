@@ -378,6 +378,15 @@ db.customers.aggregate([
 ```
 
 
+
+### 20.  Get details of book.💻
+```js
+db.books.find({ bookName: "Every Day" }, {_id : 0})
+
+
+```
+
+
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
 If you have any questions or need assistance, please don't hesitate to reach out.<br>
 Happy coding! 🤗
