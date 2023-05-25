@@ -295,7 +295,53 @@ db.customers.aggregate([
 ```
 
 
+### 17.  Get the total price from cart table💻
+```js
+ db.cart.aggregate([
+{
+  $group: {
+  _id: null,
+  totalPriceInCarts: {$sum : "$totalPrice"}
+  }
+},
+{
+  $addFields: {
+  priceInInt : { $concat: [ { $toString: { $sum: "$totalPriceInCarts" } }, " $" ] }
+  }
+}
+])
+```
 
+
+### 18.  Find book name and the corresponding author's name for each matching.💻
+```js
+ db.books.aggregate([
+  {
+    $lookup: {
+      from: "authors",
+      localField: "author_id",
+      foreignField: "_id",
+      as: "author"
+    }
+  },
+  {
+    $unwind: "$author"
+  },
+  {
+    $match: {
+      "author.name": { $regex: /^A/, $options: "i" }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      bookName: 1,
+      authorName: "$author.name",
+    }
+  }
+])
+
+```
 
 
 Feel free to explore these queries and utilize them to interact with our MongoDB database effectively.<br>
