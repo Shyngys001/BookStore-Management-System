@@ -150,57 +150,72 @@ db.orders.aggregate([
 ```
 
 
-### 9. List the books with the most reviews. 📜 
+### 9. List the books with the most reviews.  
 ```js
 db.books.aggregate([
 {
-$lookup: {
-from: "reviews",
-localField: "_id",
-foreignField: "book_id",
-as: "reviews"
-}
-},
+  $lookup: {
+   from: "reviews",
+   localField: "_id",
+   foreignField: "book_id",
+   as: "reviews"
+  }
+ },
 {
-$project: {
-_id: 1,
-bookName: 1,
-reviewCount: { $size: "$reviews" }
-}
-},
-{$match: {
-reviewCount: {$ne : 0}
-}
-}
+  $project: {
+   _id: 1,
+   bookName: 1,
+   reviewCount: { $size: "$reviews" }
+  }
+ },
+{
+  $match: {
+   reviewCount: {$ne : 0}
+  }
+ }
 ])
 ```
 
 ### 10. List books with drama genres.📜 
 ```js
 db.genre.aggregate([
-{
-$lookup: {
-from: 'books',
-localField: 'book_id',
-foreignField: '_id',
-as: 'genres'
-}
-},
-{
-$match: {
-genre: "Drama"
-}
-}
+ {
+  $lookup: {
+   from: 'books',
+   localField: 'book_id',
+   foreignField: '_id',
+   as: 'genres'
+  }
+ },
+ {
+  $match: {
+   genre: "Drama"
+  }
+ }
 ])
 ```
 
+### 11. Display the details of the employee with the salary less than 800$.
+```js
+db.employees.find({salary: {$lte:800}})
+```
+
+### 12. Retrieve the average rating for each book.📜
+```js
+db.reviews.aggregate([
+  {
+   $group: {
+    _id: "$book_id",
+    averageRating: { $avg: "$rating" }
+   }
+  }
+])
+```
 
 ### 13. Retrieve books within a particular price range
 ```js
 db.books.find({ price: { $gte: 10, $lte: 15 } }).sort({price: 1})
 ```
-
-
 
 ### 14. Find most popular countries where our customers come from.
 ```
